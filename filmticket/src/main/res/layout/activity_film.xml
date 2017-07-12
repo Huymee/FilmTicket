@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/ll_film_play"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/img12" />
+
+            <CheckBox
+                style="@style/imageView"
+                android:layout_centerInParent="true"
+                android:background="@drawable/btn_play_selector"
+                android:button="@null"
+                android:text="" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_film_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="110dp"
+                    android:layout_height="160dp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_toRightOf="@+id/iv_icon"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_score"
+                        style="@style/textView"
+                        android:text="评分："
+                        android:textColor="@color/cinema_info_text_dark" />
+
+                    <TextView
+                        android:id="@+id/tv_film_type"
+                        style="@style/textView"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:text="类型："
+                        android:textColor="@color/cinema_info_text_dark" />
+
+                    <TextView
+                        android:id="@+id/tv_film_area"
+                        style="@style/textView"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:text="地区："
+                        android:textColor="@color/cinema_info_text_dark" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5">
+
+                        <TextView
+                            android:id="@+id/tv_film_time"
+                            style="@style/textView"
+                            android:text="片长："
+                            android:textColor="@color/cinema_info_text_dark" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/margin_5"
+                            android:layout_marginStart="5dp"
+                            android:layout_toEndOf="@+id/tv_film_time"
+                            android:background="@mipmap/hot_format_bg"
+                            android:paddingBottom="1.0px"
+                            android:paddingLeft="2.0dip"
+                            android:paddingRight="2.0dip"
+                            android:paddingTop="1.0px">
+
+                            <TextView
+                                android:id="@+id/tv_film_format"
+                                style="@style/textView"
+                                android:layout_centerInParent="true"
+                                android:text="数字"
+                                android:textColor="@color/white"
+                                android:textSize="8.0sp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_play_time"
+                        style="@style/textView"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:text="上映日期："
+                        android:textColor="@color/cinema_info_text_dark" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/ll_info"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/ll_info"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:layout_toRightOf="@+id/iv_icon">
+
+                    <Button
+                        android:id="@+id/btn_buy"
+                        android:layout_width="match_parent"
+                        android:layout_height="40.0dip"
+                        android:background="@drawable/btn_movie_info_buy_selector"
+                        android:gravity="center"
+                        android:text="@string/tickets_buy"
+                        android:textColor="@color/btn_hot_buy_text_selector"
+                        android:textSize="@dimen/textSize_15"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_upcoming_countdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="40.0dip"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingTop="2.0dip"
+                                android:scaleType="fitCenter"
+                                android:src="@mipmap/movie_info_alarm_clock" />
+
+                            <TextView
+                                style="@style/textView"
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:text="距离上映还剩"
+                                android:textColor="@color/hot_fm_score_brick_red"
+                                android:textSize="20.0sp" />
+
+                            <TextView
+                                android:id="@+id/tv_upcoming_countdown"
+                                style="@style/textView"
+                                android:text="0"
+                                android:textColor="@color/hot_fm_score_brick_red"
+                                android:textSize="20.0sp" />
+
+                            <TextView
+                                style="@style/textView"
+                                android:text="天"
+                                android:textColor="@color/hot_fm_score_brick_red"
+                                android:textSize="20.0sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/iv_3d_imax"
+                style="@style/imageView"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_15"
+                android:src="@mipmap/icon_3d_imax"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_20"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_directors"
+                style="@style/textView"
+                android:lineSpacingExtra="@dimen/margin_10"
+                android:text="导演："
+                android:textColor="@color/cinema_info_text_dark" />
+
+            <TextView
+                android:id="@+id/tv_actors"
+                style="@style/textView"
+                android:lineSpacingExtra="@dimen/margin_10"
+                android:text="主演："
+                android:textColor="@color/cinema_info_text_dark" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_top"
+                android:layout_width="match_parent"
+                android:layout_height="1.0dip"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_15"
+                android:background="@color/city_content_title_bg" />
+
+            <RelativeLayout
+                android:id="@+id/rl_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_top">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <com.yuqs.filmticket.View.HSVLayout
+                        android:id="@+id/hsv_film_pic_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center" />
+                </HorizontalScrollView>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="1.0dip"
+                android:layout_below="@+id/rl_gallery"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_15"
+                android:background="@color/city_content_title_bg" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_story"
+            style="@style/textView"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_20"
+            android:lineSpacingExtra="@dimen/margin_10"
+            android:text="剧情："
+            android:textColor="@color/cinema_info_text_dark" />
+    </LinearLayout>
+</ScrollView>

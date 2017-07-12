@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:src="@mipmap/icon_account" />
+
+                <EditText
+                    android:id="@+id/et_register_username"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:paddingStart="10dp"
+                    android:hint="用户名"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:ems="10">
+
+                    <requestFocus />
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:src="@mipmap/icon_pwd" />
+
+                <EditText
+                    android:id="@+id/et_register_password"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:inputType="textPassword"
+                    android:paddingStart="10dp"
+                    android:hint="密码"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:src="@mipmap/icon_pwd" />
+
+                <EditText
+                    android:id="@+id/et_register_confirm_password"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:inputType="textPassword"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="重复密码"
+                    android:paddingStart="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:src="@mipmap/icon_account" />
+
+                <EditText
+                    android:id="@+id/et_register_name"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="昵称"
+                    android:paddingStart="10dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_register_submit"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_register_bg"
+                android:text="注册" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

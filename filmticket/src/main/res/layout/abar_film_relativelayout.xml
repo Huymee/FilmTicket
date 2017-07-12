@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_menu_text_selected_red">
+<Button
+    android:id="@+id/btn_abar_city"
+    android:layout_width="64dp"
+    android:layout_height="match_parent"
+    android:minHeight="0dp"
+    android:minWidth="0dp"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp"
+    android:gravity="center"
+    android:background="@drawable/btn_abar_city_selector"
+    android:text="选择城市"
+    android:textColor="@color/white"
+    android:onClick="chooseCity"/>
+    <RadioGroup
+        android:id="@+id/rg_film_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/main_menu_text_selected_red"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_film_tab_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rg_main_menu_tab_left_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="正在热映"
+            android:textColor="@color/rg_main_menu_tab_text"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/rb_film_tab_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rg_main_menu_tab_right_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="即将上映"
+            android:textColor="@color/rg_main_menu_tab_text"
+            android:textSize="14sp" />
+
+    </RadioGroup>
+</RelativeLayout>

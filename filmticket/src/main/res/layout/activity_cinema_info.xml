@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_cinema_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10">
+
+                <ImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="45.0dip"
+                    android:layout_height="45.0dip"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/icon_default_cinema_logo" />
+
+                <ImageView
+                    android:id="@+id/iv_arrow"
+                    android:layout_width="50.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/arrow_right" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_toLeftOf="@+id/iv_arrow"
+                    android:layout_toRightOf="@+id/iv_icon">
+
+                    <TextView
+                        android:id="@+id/tv_cinema_name"
+                        style="@style/textView"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/cinema_info_text_dark"
+                        android:textSize="@dimen/textSize_16"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_cinema_address"
+                style="@style/textView"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_5"
+                android:textColor="@color/cinema_info_text_light"
+                android:textSize="@dimen/textSize_12"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/city_content_title_bg" />
+
+            <RadioGroup
+                android:id="@+id/rg_film_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_15"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_film_tab_1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_cinema_info_ticket_selector"
+                    android:button="@null"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:paddingTop="@dimen/margin_5"
+                    android:gravity="center"
+                    android:text="@string/tickets_buy"
+                    android:textColor="@color/rg_cinema_info_tab_text"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_film_tab_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_cinema_info_selector"
+                    android:button="@null"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:paddingTop="@dimen/margin_5"
+                    android:gravity="center"
+                    android:text="@string/cinemas_activites_news"
+                    android:textSize="@dimen/textSize_16"
+                    android:textColor="@color/rg_cinema_info_tab_text"
+                     />
+
+            </RadioGroup>
+
+            <include
+                android:id="@+id/layout_tickets"
+                layout="@layout/layout_cinemasinfo_tickets_content" />
+
+            <include
+                android:id="@+id/layout_activies"
+                layout="@layout/layout_cinemasinfo_activities"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

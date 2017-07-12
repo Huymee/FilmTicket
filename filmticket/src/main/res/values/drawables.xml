@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="hot_buy_white">#ffffffff</item>
+    <item type="drawable" name="hot_buy_red">#ff9dc815</item>
+</resources>

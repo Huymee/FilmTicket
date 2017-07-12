@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_discount"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.yuqs.filmticket.Activity.MyDiscountActivity">
+
+    <RadioGroup
+        android:id="@+id/rg_my_discount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_my_discount_a"
+            style="@style/radioButtonDiscount"
+            android:drawableTop="@drawable/my_discount_vouchers_icon_selector"
+            android:text="@string/my_discount_activity_vouchers" />
+
+        <RadioButton
+            android:id="@+id/rb_my_discount_b"
+            style="@style/radioButtonDiscount"
+            android:drawableTop="@drawable/my_discount_exchange_icon_selector"
+            android:text="@string/my_discount_activity_exchange" />
+
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="2.0dip"
+        android:layout_marginRight="2.0dip">
+
+        <EditText
+            android:id="@+id/et_my_discount_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@mipmap/payment_order_red_packages_edit_bg_my_discount"
+            android:hint="@string/payment_order_apply_red_package"
+            android:inputType="textMultiLine"
+            android:paddingLeft="@dimen/margin_5"
+            android:paddingRight="@dimen/margin_5"
+            android:textSize="@dimen/textSize_12" />
+
+        <Button
+            android:id="@+id/btn_my_discount_vouchers_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginStart="@dimen/margin_10"
+            android:background="@mipmap/payment_order_red_package_btn_bg"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:text="@string/payment_order_red_package_add"
+            android:textColor="@color/cinema_info_text_dark" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_my_discount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_3"
+        android:layout_marginTop="17dp"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/transparent"
+        android:dividerHeight="8.0dip"
+        android:listSelector="#00000000" />
+
+</LinearLayout>

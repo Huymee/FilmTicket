@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yuqs.filmticket.Fragment.MyOrderUnpickFragment">
+
+    <TextView
+        android:id="@+id/tv_none"
+        style="@style/noOrderTextView" />
+
+    <ListView
+        android:id="@+id/lv_my_order_unpick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yuqs.filmticket.Activity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/transparent" />
+
+    <RadioGroup
+        android:id="@+id/rg_film_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/main_menu_bg_white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_film_bottom_a"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:button="@null"
+            android:drawableTop="@drawable/btn_fm_hot_selector"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/film"
+            android:textColor="@color/rg_main_bottom_text" />
+
+        <RadioButton
+            android:id="@+id/rb_film_bottom_b"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:button="@null"
+            android:drawableTop="@drawable/btn_fm_cinema_selector"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/cinemas"
+            android:textColor="@color/rg_main_bottom_text" />
+
+        <RadioButton
+            android:id="@+id/rb_film_bottom_c"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:button="@null"
+            android:drawableTop="@drawable/btn_fm_my_selector"
+            android:gravity="center"
+            android:maxLines="1"
+            android:visibility="gone"
+            android:text="@string/my"
+            android:textColor="@color/rg_main_bottom_text" />
+    </RadioGroup>
+
+</LinearLayout>

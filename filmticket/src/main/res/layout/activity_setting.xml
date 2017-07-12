@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/city_content_text_bg"
+    android:orientation="vertical"
+    tools:context="com.yuqs.filmticket.Activity.SettingActivity">
+
+    <TextView
+        android:id="@+id/tv_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@mipmap/setting_context_bg"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/margin_10"
+        android:paddingStart="@dimen/margin_10"
+        android:text="@string/setting_update"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize_16" />
+
+    <TextView
+        android:id="@+id/tv_setting_about_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@mipmap/setting_context_bg"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/margin_10"
+        android:paddingStart="@dimen/margin_10"
+        android:text="@string/setting_about"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize_16" />
+
+    <TextView
+        style="@style/textView"
+        android:layout_height="1.0dip"
+        android:layout_marginStart="@dimen/margin_20"
+        android:background="@mipmap/setting_context_middle_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_setting_QQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/setting_context_bg_without_arrow"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/textView"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginStart="@dimen/margin_20"
+            android:text="客服QQ"
+            android:textColor="@color/TextColorGray"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            style="@style/textView"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:gravity="end"
+            android:text="此处显示客服QQ"
+            android:textColor="@color/TextColorGray"
+            android:textSize="@dimen/textSize_16" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/textView"
+        android:layout_height="1.0dip"
+        android:layout_marginStart="@dimen/margin_20"
+        android:background="@mipmap/setting_context_middle_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_setting_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/setting_context_bg_without_arrow"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/textView"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginStart="@dimen/margin_20"
+            android:text="客服电话 "
+            android:textColor="@color/TextColorGray"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            style="@style/textView"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:gravity="right"
+            android:text="@string/telephone_num"
+            android:textColor="@color/TextColorGray"
+            android:textSize="@dimen/textSize_16" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_protocol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@mipmap/setting_context_bg"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/margin_10"
+        android:paddingEnd="@dimen/margin_10"
+        android:text="用户协议"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize_16" />
+
+    <LinearLayout
+        android:id="@+id/ll_cache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@mipmap/setting_context_bg"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_10"
+            android:text="清除缓存"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            style="@style/textView"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_10"
+            android:text="(包括数据和图片)"
+            android:textColor="@color/TextColorGray"
+            android:textSize="@dimen/textSize_14" />
+    </LinearLayout>
+
+</LinearLayout>

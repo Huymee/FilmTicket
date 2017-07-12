@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_recharge"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_20"
+    android:orientation="vertical"
+    tools:context="com.yuqs.filmticket.Activity.MyRechargeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账  户："
+            android:textColor="@color/coupon_info_gray_333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="这里是账户"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="积  分："
+            android:textColor="@color/coupon_info_gray_333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_integral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="这里是积分"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="余  额："
+            android:textColor="@color/coupon_info_gray_333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="这里是余额"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:background="@mipmap/recharge_edit_bg"
+        android:hint="@string/recharge_edit_hint"
+        android:inputType="number"
+        android:maxLength="3"
+        android:paddingStart="@dimen/margin_15" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/recharge_tip"
+        android:textColor="@color/cinema_info_text_dark"
+        android:textSize="@dimen/textSize_15" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@drawable/payment_order_bg"
+        android:gravity="center"
+        android:text="@string/payment_order_choosepayment"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize_16" />
+
+    <RadioGroup
+        android:id="@+id/rg_pay_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/payment_activity_frame"
+        android:padding="@dimen/margin_5">
+
+        <RadioButton
+            android:id="@+id/rb_pay_by_wechat"
+            style="@style/radioButtonPayType"
+            android:drawableEnd="@drawable/rg_recharge_pay_type_selector"
+            android:drawableStart="@mipmap/icon_payment_order_wechat"
+            android:text="@string/payment_order_wechat" />
+
+        <RadioButton
+            android:id="@+id/rb_pay_by_alipay"
+            style="@style/radioButtonPayType"
+            android:drawableEnd="@drawable/rg_recharge_pay_type_selector"
+            android:drawableStart="@mipmap/icon_payment_order_alipay"
+            android:text="@string/payment_order_alipay" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="金额将会充到 "
+            android:textColor="@color/cinema_info_text_dark"
+            android:textSize="@dimen/textSize_18" />
+
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="xxxxxxxxxxx"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textSize_18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text=" 账户"
+            android:textColor="@color/cinema_info_text_dark"
+            android:textSize="@dimen/textSize_18" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_sure_to_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_30"
+        android:background="@drawable/btn_tickets_selector"
+        android:padding="@dimen/margin_5"
+        android:text="@string/recharge_btn_sure"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize_16" />
+</LinearLayout>

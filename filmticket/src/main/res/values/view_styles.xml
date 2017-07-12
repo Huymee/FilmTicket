@@ -1,0 +1,55 @@
+<resources>
+
+    <style name="radioButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/my_orders_rg_text</item>
+        <item name="android:textSize">@dimen/textSize_15</item>
+    </style>
+
+    <style name="radioButtonDiscount">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/margin_15</item>
+        <item name="android:textColor">@color/my_discount_rg_text</item>
+        <item name="android:textSize">@dimen/textSize_15</item>
+    </style>
+
+    <style name="radioButtonPayType">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingStart">@dimen/margin_5</item>
+        <item name="android:paddingTop">@dimen/margin_5</item>
+        <item name="android:paddingBottom">@dimen/margin_5</item>
+        <item name="android:drawablePadding">@dimen/margin_5</item>
+        <item name="android:textSize">@dimen/textSize_15</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingEnd">@dimen/margin_10</item>
+    </style>
+
+    <style name="noOrderTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/coupon_info_gray_666666</item>
+        <item name="android:textSize">@dimen/textSize_36</item>
+        <item name="android:text">@string/no_order</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="imageView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="textView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>
